@@ -85,7 +85,7 @@ body {
 }
 
 .logo h1 {
-	font-size: 2.4rem;
+	font-size: clamp(1.7rem, 2rem, 2.4rem);
 	font-weight: 600;
 	color: #fff;
 }
@@ -96,7 +96,7 @@ body {
 	padding: 1.1rem 1.6rem;
 	font-size: 1.8rem;
 	border-radius: 0.7rem;
-	width: 40rem;
+	max-width: 45%;
 	transition: all 0.3s;
 	color: var(--color-text);
 
@@ -116,7 +116,7 @@ body {
 
 .num-results {
 	justify-self: end;
-	font-size: 1.8rem;
+	font-size: clamp(0.8rem, 1.8rem, 1.8rem);
 }
 
 .btn-toggle {
@@ -168,8 +168,9 @@ body {
 }
 
 .list img {
-	width: 100%;
+	max-width: 100%;
 	grid-row: 1 / -1;
+	font-size: 1rem;
 }
 
 .list h3 {
@@ -242,6 +243,8 @@ body {
 .details {
 	line-height: 1.4;
 	font-size: 1.4rem;
+	width: 42rem;
+	min-width: 42rem;
 }
 
 .details header {
@@ -256,7 +259,7 @@ body {
 }
 
 .details img {
-	width: 46%;
+	max-width: 46%;
 }
 
 .details-overview {
@@ -309,7 +312,7 @@ body {
 
 .seconds {
 	background-color: var(--color-background-100);
-	width: 8rem;
+	max-width: 8rem;
 	border-radius: 10rem;
 	font-weight: 600;
 	text-align: center;
@@ -337,6 +340,26 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.main {
+		min-width: 90vw;
+		flex-direction: column;
+	}
+
+	.box {
+		min-width: 90vw;
+		min-height: auto;
+	}
+
+	.details-overview {
+		min-width: 100%;
+	}
+
+	.list li {
+		column-gap: 5rem;
+	}
 }
 
 /*
